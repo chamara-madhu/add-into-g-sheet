@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 const spreadsheetId = "1A-YybFvVcEWuSVAn11ClvUGYR9u-r570POlJgK9fp_Q";
 
 // Define a route that responds with "Hello, World!" when accessed
-app.get("/add-to-g-sheet", async (req, res) => {
+app.post("/add-to-g-sheet", async (req, res) => {
   console.log({ req });
   const auth = new google.auth.GoogleAuth({
     keyFile: "t-bounty-396905-f4fc0bf1a55e.json",
